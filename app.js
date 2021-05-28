@@ -49,3 +49,10 @@ btn.addEventListener("click", () => {
       }
     });
 });
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -20.9043, lng: 165.618 },
+//     zoom: 8,
+//   });
+//   map = new google.maps.Map(document.getElementById("map"), options);
+// }
