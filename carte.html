@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul class="liste-nav">
+            <li class="item-nav"><a href="./index.html">Accueil</a></li>
+            <li class="item-nav"><a href="#">Les arbres</a></li>
+            <li class="item-nav"><a href="./carte.html">Carte</a></li>
+            <li class="item-nav"><a href="./about.html">À propos</a></li>
+        </ul>
+        <div class="btn-toggle-container" role="button">
+            <img src="./sources/svg/menu.svg" alt="icone menu hamburger">
+        </div>
+    </nav>
+    <h1>LES ARBRES REMARQUABLES</h1>
+    <div id="map"></div>
+
+
+
+
+    <script src="./app.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyiqWOxnd7VmM6rnikWqjQB9hNXfFXzrY&callback=initMap">
+        </script>
+</body>
+
+</html>
