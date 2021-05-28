@@ -66,21 +66,29 @@ nav {
   }
 }
 main {
-  margin: 5%;
+  margin: 0 5%;
+  width: 100vw;
 }
 
 h1 {
   font-family: Lato, sans-serif;
   color: #359d86;
   margin-top: 20px;
+  font-size: 30px;
 }
 .subtitle {
   font-family: Lato, sans-serif;
   font-size: 16px;
   margin-top: 50px;
   color: #0c1153;
+  width: 60%;
 }
-
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
 .btn {
   width: 200px;
   height: 50px;
@@ -93,6 +101,7 @@ h1 {
   background-color: white;
   cursor: pointer;
   margin-top: 50px;
+  align-self: center;
 }
 
 .btn:hover {
@@ -100,17 +109,22 @@ h1 {
   background-color: #359d86;
 }
 
+.liste-arbres {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .liste-arbres li {
   background-color: #0c1153;
   border: 3px solid #359d86;
   box-shadow: 10px 10px 34px 0px rgba(0, 0, 0, 0.75);
-  margin: 100px;
+  margin: 100px 10px;
   list-style-type: none;
   color: #359d86;
   padding: 10px;
   font-family: Lato, sans-serif;
   height: 500px;
-  max-width: 500px;
+  max-width: 400px;
   min-width: 320px;
   border-radius: 10px;
 }
