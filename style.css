@@ -66,7 +66,6 @@ nav {
   }
 }
 main {
-  margin: 0 5%;
   width: 100vw;
 }
 
@@ -74,7 +73,7 @@ h1 {
   font-family: Lato, sans-serif;
   color: #359d86;
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 80px;
   margin-bottom: 50px;
 }
 .subtitle {
@@ -86,9 +85,11 @@ h1 {
 }
 .info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 90%;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
 }
 .btn {
   width: 200px;
@@ -114,6 +115,7 @@ h1 {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .liste-arbres li {
   background-color: #0c1153;
@@ -146,4 +148,16 @@ h1 {
   font-family: Lato, sans-serif;
   font-size: 30px;
   width: 90%;
+}
+
+.img-bg {
+  width: auto;
+  max-height: 500px;
+  min-height: 200px;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
