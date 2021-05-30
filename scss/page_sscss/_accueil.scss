@@ -78,6 +78,7 @@ nav li a:hover::after {
     height: auto;
     position: absolute;
     top: -5px;
+    background: #fff;
 
     border-bottom: 1px solid #000;
   }
@@ -92,5 +93,50 @@ nav li a:hover::after {
 
   .active-nav {
     display: flex;
+  }
+}
+
+// __________________Main__________________
+
+.container-global {
+  padding-bottom: 400px;
+}
+// __________________Naviguations__________________
+
+.container-txt {
+  width: 50%;
+  height: 900px;
+  flex-direction: column;
+  padding-left: 5%;
+
+  .big-title {
+    @extend %big-title;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+.btn-arbre {
+  position: absolute;
+  padding: 20px;
+  border: none;
+  border: solid 2px $primary;
+  outline: none;
+  background: transparent;
+  border-radius: 20px;
+  color: $primary;
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: large;
+  margin-left: 40%;
+  width: 200px;
+}
+.container-img {
+  img {
+    width: 50%;
+    position: absolute;
+    top: -12px;
+    right: -125px;
   }
 }

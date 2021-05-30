@@ -10,25 +10,44 @@
         content=" Les arbres remarquables de Nouvelle-Calédonie inscrit au PUD source DATA-GOUV-NC">
     <link rel="shortcut icon" href="./sources/logo/logo-du-site.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/stv2uni.css">
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
+    <link rel="stylesheet" href="./scss/main.css">
+
+
 
 <body>
 
     <!-- __________________Naviguations__________________ -->
     <nav>
+        <img src="./sources/logo/logo-du-site.png" alt="Jolie arbre stylisée - logo" class="logo-nav">
         <ul>
             <li><a href="./index.html">Accueil</a></li>
             <li><a href="./pages/carte.html">Carte</a></li>
             <li><a href="./pages/about.html">À propos</a></li>
         </ul>
-        <img src="./sources/logo/logo-du-site.png" alt="Jolie arbre stylisée - logo" class="logo-nav">
         <button class="responsive-nav-btn">
             <img src="./sources/svg/SVG/menu.svg" alt="Menu burger">
         </button>
     </nav>
 
-    <!-- <h1 class="titre-page">Les arbres remarquables</h1> -->
+    <!-- __________________Main__________________ -->
+    <main class="container-global">
+        <div class="container-txt">
+            <h1 class="big-title">Les arbres <br> remarquables</h1>
+            <p class="subtitles">
+                inventaire des arbres remarquables qui recense 142 sujets répondant à des critères légitimant leur
+                identification au titre des éléments de paysage à conserver et à mettre en valeur. Les prescriptions
+                règlementaires applicables à ces arbres sont déterminées dans le règlement du PUD, article 19 des
+                dispositions communes.
+            </p>
+            <a href="./pages/arbres.html"><button class="btn-arbre">Voir les arbres</button> </a>
+        </div>
+        <div class="container-img">
+            <img src="./sources/svg/SVG/image bg.svg" alt="">
+        </div>
+
+
+    </main>
+
 
     <script src="./scripts/navbar.js"></script>
 </body>
