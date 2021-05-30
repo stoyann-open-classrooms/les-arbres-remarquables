@@ -1,0 +1,18 @@
+%big-title {
+  font-family: Lato, sans-serif;
+  font-size: 70px;
+  padding: 0, 25px, 20px;
+  color: $primary;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

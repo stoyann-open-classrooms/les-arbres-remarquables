@@ -1,0 +1,13 @@
+@mixin abs-center($top, $right, $bottom, $left, $x, $y) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  transform: translate($x, $y);
+}
+
+@mixin square($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
