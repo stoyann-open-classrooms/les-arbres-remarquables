@@ -1,0 +1,20 @@
+.liste-arbres {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  list-style-type: none;
+  li {
+    margin-bottom: 100px;
+    background-color: $primary;
+    color: $secondary;
+    padding: 50px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.liste-arbres li:hover {
+  transform: scale(1.1);
+}
