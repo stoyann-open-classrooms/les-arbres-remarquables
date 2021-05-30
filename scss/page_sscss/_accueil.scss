@@ -85,8 +85,8 @@ nav li a:hover::after {
 
   nav ul {
     width: 100%;
-    background: #fff;
-    flex-direction: column;
+
+    // flex-direction: column;
     display: none;
     // border-bottom: 1px solid #000;
   }
@@ -138,5 +138,12 @@ nav li a:hover::after {
     position: absolute;
     top: -12px;
     right: -125px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container-img {
+    img {
+      display: none;
+    }
   }
 }
