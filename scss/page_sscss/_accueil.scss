@@ -114,6 +114,11 @@ nav li a:hover::after {
   }
   p {
     font-size: 13px;
+    a {
+      color: $primary;
+      text-decoration: none;
+      font-weight: 600;
+    }
   }
 }
 .btn-arbre {

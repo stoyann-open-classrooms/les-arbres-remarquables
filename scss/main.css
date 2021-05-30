@@ -139,6 +139,12 @@ nav li a:hover::after {
   font-size: 13px;
 }
 
+.container-txt p a {
+  color: #35a194;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .btn-arbre {
   position: absolute;
   padding: 20px;
