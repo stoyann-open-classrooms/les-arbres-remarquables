@@ -1,1 +1,1 @@
-var bigMap = L.map("big-map").setView([51.505, -0.09], 13);
+var carte = L.map("ma-carte").setView([51.505, -0.09], 13);
