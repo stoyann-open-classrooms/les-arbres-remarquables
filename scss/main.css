@@ -247,6 +247,25 @@ nav li a:hover::after {
   }
 }
 
+.container-gouv {
+  margin-left: 10%;
+  margin-top: 50px;
+  width: 300px;
+  -webkit-animation: apparition 1.4s ease-out;
+          animation: apparition 1.4s ease-out;
+}
+
+.container-gouv img {
+  width: 300px;
+  height: auto;
+}
+
+.container-gouv p {
+  color: #9c9b9b;
+  font-size: 12px;
+  text-align: center;
+}
+
 .liste-arbres {
   display: -webkit-box;
   display: -ms-flexbox;

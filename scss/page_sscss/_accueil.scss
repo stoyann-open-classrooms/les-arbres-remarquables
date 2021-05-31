@@ -102,7 +102,7 @@ nav li a:hover::after {
 .container-global {
   padding-bottom: 400px;
 }
-// __________________Naviguations__________________
+// __________________main text__________________
 
 .container-txt {
   width: 50%;
@@ -129,6 +129,7 @@ nav li a:hover::after {
     }
   }
 }
+
 .btn-arbre {
   position: absolute;
   padding: 20px;
@@ -151,6 +152,9 @@ nav li a:hover::after {
 .btn-arbre:hover {
   transform: scale(1.1);
 }
+
+// __________________main img__________________
+
 .container-img {
   img {
     width: 50%;
@@ -164,5 +168,22 @@ nav li a:hover::after {
     img {
       display: none;
     }
+  }
+}
+// __________________gouv-content__________________
+.container-gouv {
+  margin-left: 10%;
+  margin-top: 50px;
+  width: 300px;
+  animation: apparition 1.4s ease-out;
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+  p {
+    color: $tiertiary;
+    font-size: 12px;
+    text-align: center;
   }
 }
