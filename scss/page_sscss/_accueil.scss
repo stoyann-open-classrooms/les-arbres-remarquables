@@ -35,10 +35,11 @@ nav a {
   color: $tiertiary;
   font-size: 25px;
   transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  color: $secondary;
+  color: $primary;
 }
 
 nav li a::after {
@@ -105,7 +106,8 @@ nav li a:hover::after {
 
 .container-txt {
   width: 50%;
-  height: 900px;
+  height: auto;
+  margin-top: 120px;
   flex-direction: column;
   padding-left: 5%;
 
@@ -114,6 +116,12 @@ nav li a:hover::after {
   }
   p {
     font-size: 13px;
+    color: $tiertiary;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    animation: apparition-down 0.8s ease-out;
+
     a {
       color: $primary;
       text-decoration: none;
@@ -134,8 +142,14 @@ nav li a:hover::after {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: large;
-  margin-left: 40%;
+  margin-left: 460px;
   width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: apparition-down 0.8s ease-out;
+}
+.btn-arbre:hover {
+  transform: scale(1.1);
 }
 .container-img {
   img {

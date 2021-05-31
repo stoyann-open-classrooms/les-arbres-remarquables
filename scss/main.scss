@@ -1,5 +1,11 @@
 @import "./variables/variables";
+@import "./page_sscss/animations/animation";
 @import "./mixins/mixin";
 @import "./placeholder/placeholder";
 @import "./page_sscss/accueil";
 @import "./page_sscss/arbres";
+@import "./page_sscss/map";
+
+body {
+  background-color: rgb(24, 24, 24);
+}

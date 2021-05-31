@@ -1,8 +1,62 @@
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes apparition-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes apparition-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 .container-txt .big-title {
   font-family: Lato, sans-serif;
   font-size: 60px;
   color: #35a194;
   text-transform: uppercase;
+  -webkit-animation: apparition 0.8s ease-out;
+          animation: apparition 0.8s ease-out;
 }
 
 nav ul {
@@ -57,10 +111,11 @@ nav a {
   font-size: 25px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  color: #0c1153;
+  color: #35a194;
 }
 
 nav li a::after {
@@ -127,7 +182,8 @@ nav li a:hover::after {
 
 .container-txt {
   width: 50%;
-  height: 900px;
+  height: auto;
+  margin-top: 120px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -137,6 +193,12 @@ nav li a:hover::after {
 
 .container-txt p {
   font-size: 13px;
+  color: #9c9b9b;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  -webkit-animation: apparition-down 0.8s ease-out;
+          animation: apparition-down 0.8s ease-out;
 }
 
 .container-txt p a {
@@ -158,8 +220,18 @@ nav li a:hover::after {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: large;
-  margin-left: 40%;
+  margin-left: 460px;
   width: 200px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: apparition-down 0.8s ease-out;
+          animation: apparition-down 0.8s ease-out;
+}
+
+.btn-arbre:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .container-img img {
@@ -208,5 +280,13 @@ nav li a:hover::after {
 .liste-arbres li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#big-map {
+  height: 450px;
+}
+
+body {
+  background-color: #181818;
 }
 /*# sourceMappingURL=main.css.map */
