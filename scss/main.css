@@ -55,8 +55,8 @@
   font-size: 60px;
   color: #35a194;
   text-transform: uppercase;
-  -webkit-animation: apparition 0.8s ease-out;
-          animation: apparition 0.8s ease-out;
+  -webkit-animation: apparition 0.8s 2ms ease-out;
+          animation: apparition 0.8s 2ms ease-out;
 }
 
 nav ul {
@@ -79,7 +79,6 @@ body {
 
 nav {
   padding-top: 25px;
-  width: 100%;
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,8 +160,8 @@ nav li a:hover::after {
             flex-direction: column;
     height: auto;
     position: absolute;
-    top: -5px;
-    background: #fff;
+    top: -120px;
+    width: 100vw;
     border-bottom: 1px solid #000;
   }
   nav ul {
@@ -284,12 +283,16 @@ nav li a:hover::after {
           align-items: center;
   margin-top: 150px;
   list-style-type: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-animation: apparition-down 1s 0.8ms ease-out;
+          animation: apparition-down 1s 0.8ms ease-out;
 }
 
 .liste-arbres li {
   margin: 20px 5%;
   width: 300px;
-  height: 500px;
+  height: 400px;
   background-color: #9c9b9b;
   border: 10px solid #35a194;
   color: #0c1153;
@@ -299,6 +302,7 @@ nav li a:hover::after {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  font-size: 18px;
 }
 
 .liste-arbres li:hover {
@@ -307,20 +311,23 @@ nav li a:hover::after {
 }
 
 .big-title {
-  margin-top: 150px;
+  margin-left: 20%;
   font-size: 80px;
-  text-align: center;
 }
 
 #ma-carte {
-  height: 800px;
+  height: 80vh;
   margin: 5%;
+  -webkit-animation: apparition-down 1s 0.8ms ease-out;
+          animation: apparition-down 1s 0.8ms ease-out;
 }
 
 .explications {
   color: #9c9b9b;
   width: 50%;
   margin-left: 5%;
+  -webkit-animation: apparition-down 1s 0.8ms ease-out;
+          animation: apparition-down 1s 0.8ms ease-out;
 }
 
 .article {
@@ -328,10 +335,14 @@ nav li a:hover::after {
   margin-left: 5%;
   margin-right: 5%;
   width: 50%;
+  -webkit-animation: apparition-down 1s 0.8ms ease-out;
+          animation: apparition-down 1s 0.8ms ease-out;
 }
 
 .article h2 {
   color: #35a194;
+  -webkit-animation: apparition-down 1s 2ms ease-out;
+          animation: apparition-down 1s 2ms ease-out;
 }
 
 body {

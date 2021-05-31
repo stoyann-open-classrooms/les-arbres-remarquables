@@ -30,17 +30,10 @@ fetch(
       newLi.appendChild(newScientifiqueName);
       newLi.appendChild(newLocationCarte);
       newLi.appendChild(newProprio);
-      newLi.appendChild(newLocationDescription);
-      newLi.appendChild(newCriteres);
+      // newLi.appendChild(newLocationDescription);
+      // newLi.appendChild(newCriteres);
       newLi.appendChild(validation);
       liste.appendChild(newLi);
+      liste.appendChild(map);
     }
   });
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -20.9043, lng: 165.618 },
-    zoom: 8,
-  });
-  map = new google.maps.Map(document.getElementById("map"), options);
-}

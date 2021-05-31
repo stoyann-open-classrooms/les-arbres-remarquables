@@ -2,6 +2,7 @@
   color: $tiertiary;
   width: 50%;
   margin-left: 5%;
+  animation: apparition-down 1s 0.8ms ease-out;
 }
 
 .article {
@@ -9,7 +10,10 @@
   margin-left: 5%;
   margin-right: 5%;
   width: 50%;
+  animation: apparition-down 1s 0.8ms ease-out;
+
   h2 {
     color: $primary;
+    animation: apparition-down 1s 2ms ease-out;
   }
 }

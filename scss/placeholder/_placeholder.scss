@@ -3,7 +3,7 @@
   font-size: 60px;
   color: $primary;
   text-transform: uppercase;
-  animation: apparition 0.8s ease-out;
+  animation: apparition 0.8s 2ms ease-out;
 }
 
 %flex-center {

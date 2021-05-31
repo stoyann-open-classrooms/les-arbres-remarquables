@@ -6,17 +6,20 @@
   align-items: center;
   margin-top: 150px;
   list-style-type: none;
+  transition: all 0.2s ease-in-out;
+  animation: apparition-down 1s 0.8ms ease-out;
 
   li {
     margin: 20px 5%;
     width: 300px;
-    height: 500px;
+    height: 400px;
     background-color: $tiertiary;
     border: 10px solid $primary;
     color: $secondary;
     padding: 50px;
     border-radius: 25px;
     transition: transform 0.3s ease-in-out;
+    font-size: 18px;
   }
 }
 
@@ -26,7 +29,7 @@
 
 .big-title {
   @extend %big-title;
-  margin-top: 150px;
+  margin-left: 20%;
+  // margin-top: 150px;
   font-size: 80px;
-  text-align: center;
 }
