@@ -39,6 +39,7 @@ function createCards(data) {
     let cardEtiquette = document.createElement("div");
     // ajouts des classe css et atrributs
     card.classList = "card";
+    linkCard.href = `./trhee.html?id=${data.features[i].properties.etiquette}`;
     cardCoverBox.classList = "card-cover-box";
     cardCoverImg.setAttribute(
       "src",
