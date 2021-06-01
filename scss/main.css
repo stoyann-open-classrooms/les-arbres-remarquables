@@ -52,7 +52,7 @@
 
 .container-txt .big-title, .big-title {
   font-family: Lato, sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   color: #35a194;
   text-transform: uppercase;
   -webkit-animation: apparition 0.8s 2ms ease-out;
@@ -272,63 +272,79 @@ nav li a:hover::after {
   border-radius: 15px;
 }
 
-.liste-arbres {
+.container-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  list-style-type: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-animation: apparition-down 1s 0.8ms ease-out;
-          animation: apparition-down 1s 0.8ms ease-out;
-  width: 100%;
 }
 
-.liste-arbres li {
-  margin: 20px 20px;
-  min-width: 320px;
-  height: 400px;
-  border: 10px solid #35a194;
-  color: #9c9b9b;
-  padding: 10px;
+.container-cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+  width: 420px;
   border-radius: 25px;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  font-size: 14px;
+  height: 250px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: solid 5px #35a194;
 }
 
-.liste-arbres li img {
-  width: auto;
-  height: 171px;
-  display: block;
+.card-cover-box img {
+  width: 200px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 25px;
+  border-radius: 25px 0px 0px 25px;
 }
 
-.liste-arbres li:hover {
+.card-content-txt {
+  color: #fff;
+  padding: 20px 20px;
+  font-size: 15px;
+}
+
+.card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
+.card-name {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #35a194;
+  text-decoration: overline;
+}
+
+.card-name-s {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.card-quartier-box {
+  margin-top: 20px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.card-proprio {
+  margin-top: 60px;
+  text-transform: lowercase;
+}
+
+.card-etiquette {
+  color: #35a194;
+}
+
 .big-title {
-  margin-left: 5%;
-  font-size: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 2.5%;
+  margin-top: 50px;
 }
 
 #ma-carte {

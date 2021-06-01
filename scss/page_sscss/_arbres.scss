@@ -1,43 +1,7 @@
-.liste-arbres {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  list-style-type: none;
-  transition: all 0.2s ease-in-out;
-  animation: apparition-down 1s 0.8ms ease-out;
-  width: 100%;
-
-  li {
-    margin: 20px 20px;
-    min-width: 320px;
-    height: 400px;
-    // background-color: $tiertiary;
-    border: 10px solid $primary;
-    color: $tiertiary;
-    padding: 10px;
-    border-radius: 25px;
-    transition: transform 0.3s ease-in-out;
-    font-size: 14px;
-    img {
-      width: auto;
-      height: 171px;
-      display: block;
-      object-fit: cover;
-      border-radius: 25px;
-    }
-  }
-}
-
-.liste-arbres li:hover {
-  transform: scale(1.1);
-}
-
 .big-title {
   @extend %big-title;
-  margin-left: 5%;
-  // margin-top: 150px;
-  font-size: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 2.5%;
+  margin-top: 50px;
 }

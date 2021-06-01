@@ -1,0 +1,61 @@
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    display: flex;
+    margin: 15px;
+
+    width: 420px;
+    border-radius: 25px;
+    height: 250px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: solid 5px $primary;
+  }
+}
+.card-cover-box {
+  img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px 0px 0px 25px;
+  }
+}
+
+.card-content-txt {
+  color: #fff;
+  padding: 20px 20px;
+  font-size: 15px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-name {
+  font-weight: bolder;
+  font-size: 20px;
+  color: $primary;
+  text-decoration: overline;
+}
+
+.card-name-s {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.card-quartier-box {
+  margin-top: 20px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.card-proprio {
+  margin-top: 60px;
+  text-transform: lowercase;
+}
+
+.card-etiquette {
+  color: $primary;
+}

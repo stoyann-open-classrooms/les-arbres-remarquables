@@ -11,39 +11,93 @@ fetch(
     createCards(data);
   });
 
+// function creation des cartes
+
 function createCards(data) {
   for (i = 0; i < data.features.length; i++) {
-    let newLi = document.createElement("li");
-    let newTitreCarte = document.createElement("h2");
-    let newScientifiqueName = document.createElement("h3");
-    let newLocationCarte = document.createElement("p");
-    let newProprio = document.createElement("p");
-    let newLocationDescription = document.createElement("p");
-    let newCriteres = document.createElement("p");
-    let validation = document.createElement("p");
-    let img = document.createElement("img");
-
-    newTitreCarte.innerText = `Nom commun : ${data.features[i].properties.nom_commun}`;
-    newScientifiqueName.innerText = `Nom scientifiques : ${data.features[i].properties.nom_scientifique}`;
-    newLocationCarte.innerText = `Quartier : ${data.features[i].properties.quartier}`;
-    newLocationDescription.innerText = `Observations : ${data.features[i].properties.observation}`;
-    newProprio.innerText = `Proprietaire : ${data.features[i].properties.cad_proprio}`;
-    newCriteres.innerText = `critere biologique: ${data.features[i].properties.critere_biologique} critere culturel:${data.features[i].properties.critere_culturel} critere esthetique: ${data.features[i].properties.critere_esthetique} critere paysager: ${data.features[i].properties.critere_paysager} critere physique: ${data.features[i].properties.critere_physique}`;
-    validation.innerText = `Etiquette: ${data.features[i].properties.etiquette}`;
-
-    img.setAttribute(
+    let containerCards = document.querySelector(".container-cards");
+    // creations des elements html pour les cards
+    let linkCard = document.createElement("a");
+    let card = document.createElement("div");
+    let cardCoverBox = document.createElement("div");
+    let cardCoverImg = document.createElement("img");
+    let cardContentTxt = document.createElement("div");
+    let cardNameLogo = document.createElement("div");
+    let cardNameBox = document.createElement("div");
+    let cardName = document.createElement("div");
+    let cardNameSBox = document.createElement("div");
+    let cardNameSLogo = document.createElement("div");
+    let cardNameS = document.createElement("div");
+    let cardQuartierBox = document.createElement("div");
+    let cardQuartierLogo = document.createElement("div");
+    let cardQuartier = document.createElement("div");
+    let cardProprioBox = document.createElement("div");
+    let cardProprioLogo = document.createElement("div");
+    let cardProprio = document.createElement("div");
+    let cardEtiquetteBox = document.createElement("div");
+    let cardEtiquetteLogo = document.createElement("div");
+    let cardEtiquette = document.createElement("div");
+    // ajouts des classe css et atrributs
+    card.classList = "card";
+    cardCoverBox.classList = "card-cover-box";
+    cardCoverImg.setAttribute(
       "src",
       `../sources/img_arbres/${data.features[i].properties.etiquette}.jpg`
     );
-    newLi.appendChild(newTitreCarte);
-    newLi.appendChild(newScientifiqueName);
-    newLi.appendChild(newLocationCarte);
-    newLi.appendChild(newProprio);
-    // newLi.appendChild(newLocationDescription);
-    // newLi.appendChild(newCriteres);
-    newLi.appendChild(validation);
-    liste.appendChild(newLi);
-    liste.appendChild(map);
-    newLi.appendChild(img);
+    cardCoverImg.setAttribute(
+      "alt",
+      `un ${data.features[i].properties.nom_commun}`
+    );
+    cardNameBox.classList = "card-name-box";
+    cardNameLogo.classList = "card-name-logo";
+    cardName.classList = "card-name";
+    cardNameSBox.classList = "card-name-s-box";
+    cardNameSLogo.classList = "card-name-s-logo";
+    cardNameS.classList = "card-name-s";
+    cardQuartierBox.classList = "card-quartier-box";
+    cardQuartierLogo.classList = "card-quartier-logo";
+    cardQuartier.classList = "card-quartier";
+    cardProprioBox.classList = "card-proprio-box";
+    cardProprioLogo.classList = "card-proprio-logo";
+    cardProprio.classList = "card-proprio";
+    cardEtiquetteBox.classList = "card-etiquette-box";
+    cardEtiquetteLogo.classList = "card-etiquette-logo";
+    cardEtiquette.classList = "card-etiquette";
+    cardContentTxt.classList = "card-content-txt";
+    // ajout du contenu html
+    cardNameLogo.setAttribute("src", "../sources/svg/SVG/SVG/arbre-icon.svg");
+    cardName.innerText = `${data.features[i].properties.nom_commun}`;
+    cardNameSLogo.setAttribute("src", "../sources/svg/SVG/SVG/check.svg");
+    cardNameS.innerText = `${data.features[i].properties.nom_scientifique}`;
+    cardQuartierLogo.setAttribute(
+      "src",
+      "../sources/svg/SVG/SVG/map-locatio.svg"
+    );
+    cardQuartier.innerText = `${data.features[i].properties.quartier}`;
+    cardProprioLogo.setAttribute("src", ".../sources/svg/SVG/SVG/check.svg");
+    cardProprio.innerText = `${data.features[i].properties.cad_proprio}`;
+    cardEtiquetteLogo.setAttribute("src", "../sources/svg/SVG/SVG/check.svg");
+    cardEtiquette.innerText = `${data.features[i].properties.etiquette}`;
+    //  creation de la cards dans le DOM
+    containerCards.appendChild(linkCard);
+    linkCard.appendChild(card);
+    card.appendChild(cardCoverBox);
+    card.appendChild(cardContentTxt);
+    cardContentTxt.appendChild(cardNameBox);
+    cardContentTxt.appendChild(cardNameSBox);
+    cardContentTxt.appendChild(cardQuartierBox);
+    cardContentTxt.appendChild(cardProprioBox);
+    cardContentTxt.appendChild(cardEtiquetteBox);
+    cardCoverBox.appendChild(cardCoverImg);
+    cardNameBox.appendChild(cardNameLogo);
+    cardNameBox.appendChild(cardName);
+    cardNameSBox.appendChild(cardNameSLogo);
+    cardNameSBox.appendChild(cardNameS);
+    cardQuartierBox.appendChild(cardQuartierLogo);
+    cardQuartierBox.appendChild(cardQuartier);
+    cardProprioBox.appendChild(cardProprioLogo);
+    cardProprioBox.appendChild(cardProprio);
+    cardEtiquetteBox.appendChild(cardEtiquetteLogo);
+    cardEtiquetteBox.appendChild(cardEtiquette);
   }
 }
