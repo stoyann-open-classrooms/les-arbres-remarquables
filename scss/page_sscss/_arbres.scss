@@ -4,22 +4,30 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin: auto;
   list-style-type: none;
   transition: all 0.2s ease-in-out;
   animation: apparition-down 1s 0.8ms ease-out;
+  width: 100%;
 
   li {
-    margin: 20px 5%;
-    width: 300px;
+    margin: 20px 20px;
+    min-width: 320px;
     height: 400px;
-    background-color: $tiertiary;
+    // background-color: $tiertiary;
     border: 10px solid $primary;
-    color: $secondary;
-    padding: 50px;
+    color: $tiertiary;
+    padding: 10px;
     border-radius: 25px;
     transition: transform 0.3s ease-in-out;
-    font-size: 18px;
+    font-size: 14px;
+    img {
+      width: auto;
+      height: 171px;
+      display: block;
+      object-fit: cover;
+      border-radius: 25px;
+    }
   }
 }
 
@@ -29,7 +37,7 @@
 
 .big-title {
   @extend %big-title;
-  margin-left: 20%;
+  margin-left: 5%;
   // margin-top: 150px;
   font-size: 80px;
 }

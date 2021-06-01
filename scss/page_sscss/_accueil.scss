@@ -12,6 +12,7 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo-nav {
@@ -185,4 +186,9 @@ nav li a:hover::after {
     font-size: 12px;
     text-align: center;
   }
+}
+
+.big-image {
+  width: 100%;
+  border-radius: 15px;
 }

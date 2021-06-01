@@ -86,6 +86,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo-nav {
@@ -265,6 +267,11 @@ nav li a:hover::after {
   text-align: center;
 }
 
+.big-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
 .liste-arbres {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,28 +288,37 @@ nav li a:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 150px;
+  margin: auto;
   list-style-type: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-animation: apparition-down 1s 0.8ms ease-out;
           animation: apparition-down 1s 0.8ms ease-out;
+  width: 100%;
 }
 
 .liste-arbres li {
-  margin: 20px 5%;
-  width: 300px;
+  margin: 20px 20px;
+  min-width: 320px;
   height: 400px;
-  background-color: #9c9b9b;
   border: 10px solid #35a194;
-  color: #0c1153;
-  padding: 50px;
+  color: #9c9b9b;
+  padding: 10px;
   border-radius: 25px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+.liste-arbres li img {
+  width: auto;
+  height: 171px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
 }
 
 .liste-arbres li:hover {
@@ -311,7 +327,7 @@ nav li a:hover::after {
 }
 
 .big-title {
-  margin-left: 20%;
+  margin-left: 5%;
   font-size: 80px;
 }
 

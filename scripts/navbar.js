@@ -12,7 +12,7 @@ imgBtn.addEventListener("click", () => {
     imgBtn.getElementsByClassName.width = "30px";
     imgBtn.getElementsByClassName.height = "30px";
   } else {
-    imgBtn.src = "../sources/svg/menu.svg";
+    // imgBtn.src = "../sources/svg/menu.svg";
     imgBtn.getElementsByClassName.width = "40px";
     imgBtn.getElementsByClassName.height = "40px";
   }
