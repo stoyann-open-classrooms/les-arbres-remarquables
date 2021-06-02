@@ -19,7 +19,8 @@ function showCurrentThree(data) {
       const communName = data.features[i].properties.nom_commun;
       const scientName = data.features[i].properties.nom_scientifique;
       const observation = data.features[i].properties.observation;
-
+      let imgContainer = document.querySelector(".container-img");
+      let img = document.createElement("img");
       let main = document.querySelector("main");
       let titlePage = document.createElement("h1");
       let subtitle = document.createElement("h2");
@@ -28,7 +29,12 @@ function showCurrentThree(data) {
       titlePage.innerText = communName;
       subtitle.innerText = scientName;
       observationTxt.innerText = observation;
+      img.setAttribute(
+        "src",
+        `../sources/img_arbres/${data.features[i].properties.etiquette}.jpg`
+      );
 
+      imgContainer.appendChild(img);
       main.appendChild(titlePage);
       main.appendChild(subtitle);
       main.appendChild(observationTxt);
