@@ -1,6 +1,5 @@
 const parseUrl = new URL(window.location.href);
-const currentThree = [];
-const currentThreePos = [];
+
 const threeEtiquette = parseUrl.searchParams.get("id");
 
 fetch(
@@ -8,17 +7,31 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    getCurrentThree(data);
+    showCurrentThree(data);
     getPositionThree(data);
   });
 
 // recuperer le tableau de donnee de l'arbre courrant
 
-function getCurrentThree(data) {
+function showCurrentThree(data) {
   for (i = 0; i < data.features.length; i++) {
     if (data.features[i].properties.etiquette === threeEtiquette) {
-      currentThree.push(data.features[i].properties);
-      return currentThree;
+      const communName = data.features[i].properties.nom_commun;
+      const scientName = data.features[i].properties.nom_scientifique;
+      const observation = data.features[i].properties.observation;
+
+      let main = document.querySelector("main");
+      let titlePage = document.createElement("h1");
+      let subtitle = document.createElement("h2");
+      let observationTxt = document.createElement("p");
+
+      titlePage.innerText = communName;
+      subtitle.innerText = scientName;
+      observationTxt.innerText = observation;
+
+      main.appendChild(titlePage);
+      main.appendChild(subtitle);
+      main.appendChild(observationTxt);
     }
   }
 }
@@ -27,7 +40,7 @@ function getCurrentThree(data) {
 function getPositionThree(data) {
   for (i = 0; i < data.features.length; i++) {
     if (data.features[i].properties.etiquette === threeEtiquette) {
-      currentThreePos.push(data.features[i].geometry.coordinates);
+      const currentThreePos = data.features[i].geometry.coordinates;
       return currentThreePos;
     }
   }

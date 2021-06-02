@@ -377,6 +377,26 @@ nav li a:hover::after {
           animation: apparition-down 1s 2ms ease-out;
 }
 
+.container-global {
+  margin: 5%;
+}
+
+.container-global h1 {
+  color: #35a194;
+  font-size: 70px;
+}
+
+.container-global h2 {
+  font-size: 50px;
+  font-style: italic;
+  color: white;
+}
+
+.container-global p {
+  font-size: 30px;
+  color: white;
+}
+
 body {
   background-color: #181818;
 }
