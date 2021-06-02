@@ -380,4 +380,8 @@ nav li a:hover::after {
 body {
   background-color: #181818;
 }
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=main.css.map */
