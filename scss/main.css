@@ -478,11 +478,11 @@ nav li a:hover::after {
   margin-top: 50px;
 }
 
-#ma-carte {
+#mapid {
   height: 80vh;
   margin: 5%;
-  -webkit-animation: apparition-down 1s 0.8ms ease-out;
-          animation: apparition-down 1s 0.8ms ease-out;
+  -webkit-animation: apparition-down 2s 0.8ms ease-out;
+          animation: apparition-down 2s 0.8ms ease-out;
 }
 
 .explications {
