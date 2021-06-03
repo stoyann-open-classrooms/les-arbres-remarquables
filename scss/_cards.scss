@@ -1,6 +1,7 @@
 .container-cards {
   display: flex;
   flex-wrap: wrap;
+  animation: apparition-down 2s ease-in-out;
 
   .card {
     display: flex;

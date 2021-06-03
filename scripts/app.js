@@ -1,16 +1,18 @@
 const liste = document.querySelector(".liste-arbres");
-
+const loader = document.querySelector(".loader");
 // ecoute d'evenement btn
 
 // recuperation des donnees
-fetch(
-  "https://opendata.arcgis.com/datasets/bd092c4a648b4012a28b048affa8ec1c_0.geojson"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    createCards(data);
-  });
-
+window.addEventListener("load", () => {
+  fetch(
+    "https://opendata.arcgis.com/datasets/bd092c4a648b4012a28b048affa8ec1c_0.geojson"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      createCards(data);
+      loader.className += " hidden";
+    });
+});
 // function creation des cartes
 
 function createCards(data) {
