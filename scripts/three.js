@@ -9,7 +9,7 @@ fetch(
   .then((data) => {
     showCurrentThree(data);
     getPositionThree(data);
-    console.log(data.features[2].properties.etiquette);
+    console.log(data);
   });
 
 // recuperer le tableau de donnee de l'arbre courrant
@@ -22,23 +22,26 @@ function showCurrentThree(data) {
       const observation = data.features[i].properties.observation;
       let imgContainer = document.querySelector(".container-img");
       let img = document.createElement("img");
+
       let main = document.querySelector("main");
+      let contentTitles = document.createElement("div");
       let titlePage = document.createElement("h1");
       let subtitle = document.createElement("h2");
-      let observationTxt = document.createElement("p");
 
       titlePage.innerText = communName;
       subtitle.innerText = scientName;
-      observationTxt.innerText = observation;
+
       img.setAttribute(
         "src",
         `../sources/img_arbres/${data.features[i].properties.etiquette}.jpg`
       );
 
-      imgContainer.appendChild(img);
-      main.appendChild(titlePage);
-      main.appendChild(subtitle);
-      main.appendChild(observationTxt);
+      // main.appendChild(imgContainer);
+      // imgContainer.appendChild(img);
+      main.appendChild(contentTitles);
+      contentTitles.appendChild(titlePage);
+      contentTitles.appendChild(subtitle);
+      contentTitles.appendChild(img);
     }
   }
 }

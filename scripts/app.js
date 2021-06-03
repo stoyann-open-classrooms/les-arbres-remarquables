@@ -45,6 +45,7 @@ function createCards(data) {
       "src",
       `../sources/img_arbres/${data.features[i].properties.etiquette}.jpg`
     );
+
     cardCoverImg.setAttribute(
       "alt",
       `un ${data.features[i].properties.nom_commun}`
