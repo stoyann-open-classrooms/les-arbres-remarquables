@@ -1,15 +1,36 @@
-// var map = L.map("mapid").setView([51.505, -0.09], 13);
+const positionThree = [];
+const arbreName = [];
 
-// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//   attribution:
-//     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-// }).addTo(map);
+fetch(
+  "https://opendata.arcgis.com/datasets/bd092c4a648b4012a28b048affa8ec1c_0.geojson"
+)
+  .then((response) => response.json())
+  .then((data) => {
+    nameTab(data);
+    gpsTab(data);
+  });
 
-// L.marker([51.5, -0.09]).addTo(map)
-//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-//     .openPopup();
-var mymap = L.map("mapid").setView([51.505, -0.09], 13);
+// recuperer la position gps des arbres
+function gpsTab(data) {
+  for (i = 0; i < data.features.length; i++) {
+    positionThree.push(data.features[i].geometry.coordinates);
+    console.log(positionThree[i]);
+  }
+}
+
+// recuperer la position gps des arbres
+function nameTab(data) {
+  for (i = 0; i < data.features.length; i++) {
+    arbreName.push(data.features[i].properties.nom_commun);
+
+    console.log(arbreName[i]);
+  }
+}
+
+const mymap = L.map("mapid").setView([-22.2758, 166.458], 13);
 
 L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-  maxZoom: 18,
+  maxZoom: 20,
 }).addTo(mymap);
+const marker = L.marker([-22.2743, 166.468]).addTo(mymap);
+marker.bindPopup("<b>Je Suis </b><br>un arbre remarquable");

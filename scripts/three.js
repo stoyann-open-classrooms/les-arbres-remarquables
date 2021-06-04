@@ -9,7 +9,6 @@ fetch(
   .then((data) => {
     showCurrentThree(data);
     getPositionThree(data);
-    console.log(data);
   });
 
 // recuperer le tableau de donnee de l'arbre courrant

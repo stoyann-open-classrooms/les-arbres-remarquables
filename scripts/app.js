@@ -1,22 +1,39 @@
+const linkToData =
+  "https://opendata.arcgis.com/datasets/bd092c4a648b4012a28b048affa8ec1c_0.geojson";
+
 const liste = document.querySelector(".liste-arbres");
 const loader = document.querySelector(".loader");
 // ecoute d'evenement btn
 
 // recuperation des donnees
+
 window.addEventListener("load", () => {
-  fetch(
-    "https://opendata.arcgis.com/datasets/bd092c4a648b4012a28b048affa8ec1c_0.geojson"
-  )
+  fetch(linkToData)
     .then((response) => response.json())
     .then((data) => {
-      createCards(data);
+      showArbres(data);
       loader.className += " hidden";
+      console.log(data);
     });
 });
-// function creation des cartes
 
-function createCards(data) {
-  for (i = 0; i < data.features.length; i++) {
+class Arbres {
+  constructor(el) {
+    this.objectId = el.properties.objectid;
+    this.nomCommun = el.properties.nom_commun;
+    this.nomScientifique = el.properties.nom_scientifique;
+    this.quartier = el.properties.quartier;
+    this.proprietaire = el.properties.cad_proprio;
+    this.etiquette = el.properties.etiquette;
+    this.coordonee = el.geometry.coordinates;
+  }
+  getName() {
+    console.log(`${this.nomCommun}`);
+  }
+  getPosition() {
+    console.log(`${this.coordonee[0]}  ${this.coordonee[1]}`);
+  }
+  createElement() {
     let containerCards = document.querySelector(".container-cards");
     // creations des elements html pour les cards
     let linkCard = document.createElement("a");
@@ -41,17 +58,14 @@ function createCards(data) {
     let cardEtiquette = document.createElement("div");
     // ajouts des classe css et atrributs
     card.classList = "card";
-    linkCard.href = `./trhee.html?id=${data.features[i].properties.etiquette}`;
+    linkCard.href = `./trhee.html?id=${this.etiquette}`;
     cardCoverBox.classList = "card-cover-box";
     cardCoverImg.setAttribute(
       "src",
-      `../sources/img_arbres/${data.features[i].properties.etiquette}.jpg`
+      `../sources/img_arbres/${this.etiquette}.jpg`
     );
 
-    cardCoverImg.setAttribute(
-      "alt",
-      `un ${data.features[i].properties.nom_commun}`
-    );
+    cardCoverImg.setAttribute("alt", `un ${this.nomCommun}`);
     cardNameBox.classList = "card-name-box";
     cardNameLogo.classList = "card-name-logo";
     cardName.classList = "card-name";
@@ -70,18 +84,18 @@ function createCards(data) {
     cardContentTxt.classList = "card-content-txt";
     // ajout du contenu html
     cardNameLogo.setAttribute("src", "../sources/svg/SVG/SVG/arbre-icon.svg");
-    cardName.innerText = `${data.features[i].properties.nom_commun}`;
+    cardName.innerText = `${this.nomCommun}`;
     cardNameSLogo.setAttribute("src", "../sources/svg/SVG/SVG/check.svg");
-    cardNameS.innerText = `${data.features[i].properties.nom_scientifique}`;
+    cardNameS.innerText = `${this.nomScientifique}`;
     cardQuartierLogo.setAttribute(
       "src",
       "../sources/svg/SVG/SVG/map-locatio.svg"
     );
-    cardQuartier.innerText = `${data.features[i].properties.quartier}`;
+    cardQuartier.innerText = `${this.quartier}`;
     cardProprioLogo.setAttribute("src", ".../sources/svg/SVG/SVG/check.svg");
-    cardProprio.innerText = `${data.features[i].properties.cad_proprio}`;
+    cardProprio.innerText = `${this.proprietaire}`;
     cardEtiquetteLogo.setAttribute("src", "../sources/svg/SVG/SVG/check.svg");
-    cardEtiquette.innerText = `${data.features[i].properties.etiquette}`;
+    cardEtiquette.innerText = `${this.etiquette}`;
     //  creation de la cards dans le DOM
     containerCards.appendChild(linkCard);
     linkCard.appendChild(card);
@@ -103,5 +117,13 @@ function createCards(data) {
     cardProprioBox.appendChild(cardProprio);
     cardEtiquetteBox.appendChild(cardEtiquetteLogo);
     cardEtiquetteBox.appendChild(cardEtiquette);
+  }
+}
+
+function showArbres(data) {
+  for (i = 0; i < data.features.length; i++) {
+    const newarbre = new Arbres(data.features[i]);
+
+    newarbre.createElement();
   }
 }

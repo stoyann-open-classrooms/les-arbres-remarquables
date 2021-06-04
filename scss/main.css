@@ -485,6 +485,11 @@ nav li a:hover::after {
           animation: apparition-down 2s 0.8ms ease-out;
 }
 
+#map-card {
+  height: 80vh;
+  width: 50%;
+}
+
 .explications {
   color: #9c9b9b;
   width: 50%;
@@ -509,7 +514,7 @@ nav li a:hover::after {
 }
 
 body {
-  background-color: #181818;
+  background-color: #4f4f4f;
 }
 
 a {
